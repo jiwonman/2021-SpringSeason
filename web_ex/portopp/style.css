@@ -1,0 +1,652 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #444;
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+/*##### HERO SECTION #####*/
+.hero {
+  height: 100%;
+  background: url("images/Active-Senior-Couple.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero .content {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.hero .content .header {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+.hero .content .header h1 {
+  color: #fff;
+  font-size: 2.5em;
+  text-shadow: 0px 2px 3px #2d2d2d;
+}
+
+/*##### ABOUT MYSELF SECTION #####*/
+.about-myself {
+  padding: 50px 20px;
+  display: flex;
+
+}
+.about-myself .content {
+  text-align: center;
+  margin:auto 0;
+}
+.about-myself .content h2 {
+  color: #3d3d3d;
+  font-size: 3em;
+  margin-bottom: 20px;
+  -webkit-transform: translateY(-50px) scale(0);
+  transform: translateY(-50px) scale(0);
+  -webkit-transition: transform 0.7s;
+  -moz-transition: transform 0.7s;
+  transition: transform 0.7s;
+}
+.about-myself .content .aboutTitleVisible {
+  -webkit-transform: translateY(0px) scale(1);
+  transform: translateX(0px) scale(1);
+}
+.about-myself .content p span {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/*##### produce SECTION #####*/
+.produce {
+  background: #002440;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+.produce .content {
+  text-align: center;
+}
+.produce .content h1 {
+  font-size: 2em;
+  color: #fff;
+}
+.produce .content ul {
+  padding: 50px 0;
+  list-style-type: none;
+}
+.produce .content ul li {
+  background: #f5f5f5;
+  position: relative;
+  margin-left: 20px;
+  width: 5px;
+  padding-bottom: 40px;
+}
+.produce .content ul li:last-child {
+  padding-bottom: 7px;
+}
+.produce .content ul li:before {
+  content: "";
+  background: #002440;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 4px solid #f5f5f5;
+}
+.produce .content ul li .hidden {
+  opacity: 0;
+  margin-left: 10vw;
+}
+.produce .content ul li .produce-content {
+  background: #f5f5f5;
+  position: relative;
+  top: 7px;
+  left: 48px;
+  width: calc(100vw - 100px);
+  padding: 20px;
+  text-align: center;
+  -webkit-border-radius: 0 5px 5px;
+  -moz-border-radius: 0 5px 5px;
+  border-radius: 0 5px 5px;
+}
+.produce .content ul li .produce-content h2 {
+  font-size: 1.5em;
+  color: #3c3c3c;
+  padding-bottom: 10px;
+}
+.produce .content ul li .produce-content .produce-time {
+  color: #777;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+.produce .content ul li .produce-content p {
+  color: #1a1a1a;
+  font-size: 0.95em;
+}
+.produce .content ul li .produce-content:before {
+  content: "";
+  background: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 35px;
+  height: 5px;
+}
+
+/*##### SKILLS SECTION #####*/
+.skills {
+  padding: 70px 20px;
+}
+.skills .content .development-wrapper .development-title {
+  color: #3c3c3c;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skills .content .development-wrapper .skills-bar-container {
+  position: relative;
+  width: 100%;
+  list-style-type: none;
+}
+.skills .content .development-wrapper .skills-bar-container li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title {
+  color: #3c3c3c;
+  margin-bottom: 5px;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
+  display: inline-block;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
+  position: absolute;
+  right: 20px;
+  font-size: 1.1em;
+}
+.skills .content .development-wrapper .skills-bar-container li .bar-container {
+  background: #ececec;
+  position: relative;
+  width: 100%;
+  height: 10px;
+}
+.skills .content .development-wrapper .skills-bar-container li .bar-container .progressbar {
+  background: #34495e;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+}
+.skills .content .tools-knowledge-wrapper {
+  width: 100%;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper .title,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper .title {
+  color: #3c3c3c;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul li,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li {
+  color: #444;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul li i,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li i {
+  color: #27ae60;
+}
+
+/*##### RESUME SECTION #####*/
+.resume {
+  background: url("https://source.unsplash.com/L8126OwlroY/");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.resume .content {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px 0;
+  text-align: center;
+}
+.resume .content a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.resume .content a .btn-resume {
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 20px;
+  margin: 0 15px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.resume .content a .btn-resume span {
+  -webkit-transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+}
+.resume .content a .btn-resume i {
+  color: #fff;
+  position: absolute;
+  padding: 20px 0;
+  top: -80px;
+  width: 100%;
+  left: 0;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  transition: top 0.5s;
+}
+.resume .content a .btn-resume:hover span {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.resume .content a .btn-resume:hover i {
+  top: 0;
+}
+
+/*##### PORTFOLIO SECTION #####*/
+.portfolio {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+.portfolio .content {
+  text-align: center;
+}
+.portfolio .content h1 {
+  color: #3c3c3c;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+.portfolio .content .Activities {
+  width: 100%;
+}
+.portfolio .content .Activities .Activity {
+  color: #fff;
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+.portfolio .content .Activities .Activity:last-child {
+  margin-bottom: 0;
+}
+.portfolio .content .Activities .Activity .Activity-image img {
+  width: 100%;
+}
+.portfolio .content .Activities .Activity .Activity-title {
+  color: #3c3c3c;
+  padding: 10px 0;
+}
+.portfolio .content .Activities .Activity .Activity-description {
+  color: #444;
+}
+
+/*##### CONTACT SECTION #####*/
+.contact {
+  padding: 30px 0;
+}
+.contact .socials {
+  list-style-type: none;
+  width: 100%;
+}
+.contact .socials .social {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.contact .socials .social a {
+  color: #3d3d3d;
+  font-size: 1.5em;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.contact .socials .social .email:hover {
+  color: #c8a028;
+}
+.contact .socials .social .twitter:hover {
+  color: #57AEE7;
+}
+.contact .socials .social .linkedin:hover {
+  color: #0177B5;
+}
+.contact .socials .social .codepen:hover {
+  color: #707070;
+}
+.contact .clear {
+  clear: both;
+}
+
+.footer {
+  padding: 25px 0;
+  text-align: center;
+}
+.footer p {
+  color: #777;
+  font-size: 1.1em;
+}
+.footer i {
+  color: #e74c3c;
+}
+
+/* ############################
+        RESPONSIVE
+############################### */
+@media screen and (min-width: 480px) {
+  .skills .content .tools-knowledge-wrapper .tools-wrapper,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+    width: 50%;
+    float: left;
+    padding: 0;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+    margin-left: 0;
+  }
+  .skills .content .clear {
+    clear: both;
+  }
+}
+@media screen and (min-width: 640px) {
+  .about-myself {
+    padding: 100px 40px;
+  }
+
+  .skills {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .skills .content .development-wrapper {
+    width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .skills .content .tools-knowledge-wrapper {
+    width: 600px;
+    margin: auto;
+  }
+
+  .contact .content .socials {
+    width: 600px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .produce .content ul li {
+    margin: 0 auto;
+  }
+  .produce .content ul li .produce-content {
+    width: 40vw;
+  }
+  .produce .content ul li:nth-child(odd) .produce-content {
+    left: 63px;
+  }
+  .produce .content ul li:nth-child(odd) .produce-content:before {
+    left: -50px;
+    width: 50px;
+  }
+  .produce .content ul li:nth-child(even) .produce-content {
+    left: calc(-40vw - 57px);
+    -webkit-border-radius: 5px 0px 5px 5px;
+    -moz-border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 0px 5px 5px;
+  }
+  .produce .content ul li:nth-child(even) .produce-content:before {
+    left: auto;
+    right: -50px;
+    width: 50px;
+  }
+  .produce .content ul li:nth-child(odd) .hidden {
+    margin-left: 10vw;
+  }
+  .produce .content ul li:nth-child(even) .hidden {
+    margin-left: -10vw;
+  }
+
+  .skills {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .skills .content {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .skills .content .development-wrapper,
+.skills .content .tools-knowledge-wrapper {
+    float: left;
+  }
+  .skills .content .development-wrapper {
+    margin-bottom: 0;
+    width: 60%;
+  }
+  .skills .content .tools-knowledge-wrapper {
+    width: 40%;
+    margin-top: 60px;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+    float: none;
+    margin: auto;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .portfolio .content .Activities .Activity {
+    position: relative;
+    margin: auto;
+    margin-bottom: 3%;
+    width: 680px;
+    height: 450px;
+    overflow: hidden;
+  }
+  .portfolio .content .Activities .Activity:hover .Activity-image {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  .portfolio .content .Activities .Activity:hover .Activity-title, .portfolio .content .Activities .Activity:hover .Activity-description {
+    opacity: 1;
+  }
+  .portfolio .content .Activities .Activity .Activity-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    z-index: 3;
+    overflow: hidden;
+  }
+  .portfolio .content .Activities .Activity .Activity-image img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  .portfolio .content .Activities .Activity .Activity-title,
+.portfolio .content .Activities .Activity .Activity-description {
+    position: absolute;
+    height: 50%;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    overflow: hidden;
+  }
+  .portfolio .content .Activities .Activity .Activity-title {
+    width: 50%;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    display: table;
+  }
+  .portfolio .content .Activities .Activity .Activity-title h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .portfolio .content .Activities .Activity .Activity-description {
+    width: 100%;
+    top: 50%;
+    left: 0;
+    padding: 25px 10px;
+    text-align: left;
+  }
+}
+
+.divider {
+  background-color: #ca6060;
+  height: 1px;
+  width: 160px;
+}
+
+.name {
+  color: #404245;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.img1 {
+  left: 22px;
+  top: 164px;
+  width: 340px;
+  z-index: 1;
+}
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  
+}
+
+.container {
+  border-radius: 50%;
+  height: 312px;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: property duration timeingfunction */
+  /* cubic-bezier  https://matthewlein.com/tools/ceaser, http://www.roblaplaca.com/examples/bezierBuilder/  */
+  /*
+  ease - cubic-bezier(0.25, 0.1, 0.25, 1)와 같다. 처음과 끝을 부드럽게 (기본값)
+  linear - cubic-bezier(0, 0, 1, 1)와 같다. 등속운동
+  ease-in - cubic-bezier(0.42, 0, 1, 1)와 같다. 처음을 느리게
+  ease-out - cubic-bezier(0, 0, 0.58, 1)와 같다. 마지막을 느리게
+  ease-in-out - cubic-bezier(0.42, 0, 0.58, 1)와 같다. 처음과 마지막을 느리게 준다.
+  step-start - steps(1,start)와 같다. 시작하는 지점에 스텝을 끊어준다.
+  step-end - steps(1,end)와 같다. 끝나는 시점에 스텝을 끊어준다.
+  */
+  width: 400px;
+}
+
+.container:after {
+  background-color: #f2f2f2;
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+}
+
+.container:hover {
+  transform: scale(0.54)
+}
+
+.container-inner{
+  clip-path: circle(92%);
+  position: relative;
+  transform-origin: 50%;
+  top: -200px;
+}
+
+.circle {
+  background-color: #fee7d3;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 380px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 380px;
+}
+
+.img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+
+/*# sourceMappingURL=index.css.map */

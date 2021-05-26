@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"/>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Slider</title>
+    </head>
+    <body>
+        <nav>
+            <a href="active_senior.jsp"><img src="active_senior.png" alt="logo" class="logo"></a>
+            <input type="checkbox" id="check">
+            <div class="menu-icon">
+                <label for="check" class="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <ul class="topnav">
+                <li style="width: 100%; height: 80px;"></li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">액티브 시니어란?</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item active">구인 & 고용</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">정보알리미</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">커뮤니티</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">취미공유</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="nav-item">드랍다운</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li style="float: right;" class="login">
+                    <i class="far fa-user"></i>
+                    <a href="active_senior.jsp" class="nav-item">로그인</a>
+                    <a href="active_senior.jsp" class="nav-item">회원가입</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="slider-container">
+        <div class="left-slide">
+            <div style="background-color: #66d9ff">
+              <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img src="background1.jpg" alt="circle" class="circle">
+                        <img src="alma.png" alt="Alma" class="img img1">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Alma</div>
+                <div class="title">Product Manager</div>
+            </div>
+            </div>
+            <div style="background-color: #e99b63">
+              <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img src="background2.jpg" alt="circle" class="circle">
+                        <img src="irma.png" alt="Irma" class="img img2">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Irma</div>
+                <div class="title">Senior Developer</div>
+            </div>
+            </div>
+            <div style="background-color: #f05c79">
+              <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img src="background3.jpg" alt="circle" class="circle">
+                        <img src="anton.png" alt="Anton" class="img img3">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Anton</div>
+                <div class="title">Senior UX</div>
+            </div>
+            </div>
+            <div style="background-color: #fff599;">
+                <h1>Spring</h1>
+                <p>새로운 시작</p>
+            </div>
+        </div>
+
+        <div class="right-slide">
+            <div style="background-image: url('https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');"></div>
+            <div
+                style="background-image: url('https://images.unsplash.com/photo-1542034817-6fd6c89feee4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');"></div>
+            <div
+                style="background-image: url('https://images.unsplash.com/photo-1509671658102-fbe78e4f7b60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');"></div>
+            <div
+                style="background-image: url('https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');"></div>
+        </div>
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
