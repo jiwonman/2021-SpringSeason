@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
+        <style type="text/css">
+            html,body{ margin:0; \padding:0; width:100%; height:100%;}
+            .box{ width:100%; height:100%; position:relative;}
+        </style>
+        <title>Pop out effect</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js">
+        
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                var elm = ".box";
+                $(elm).each(function (index) {
+                    // 개별적으로 Wheel 이벤트 적용
+                    $(this).on("mousewheel DOMMouseScroll", function (e) {
+                        e.preventDefault();
+                        var delta = 0;
+                        if (!event) event = window.event;
+                        if (event.wheelDelta) {
+                            delta = event.wheelDelta / 120;
+                            if (window.opera) delta = -delta;
+                        } 
+                        else if (event.detail)
+                            delta = -event.detail / 3;
+                        var moveTop = $(window).scrollTop();
+                        var elmSelecter = $(elm).eq(index);
+                        // 마우스휠을 위에서 아래로
+                        if (delta < 0) {
+                            if ($(elmSelecter).next() != undefined) {
+                                try{
+                                    moveTop = $(elmSelecter).next().offset().top;
+                                }catch(e){}
+                            }
+                        // 마우스휠을 아래에서 위로
+                        } else {
+                            if ($(elmSelecter).prev() != undefined) {
+                                try{
+                                    moveTop = $(elmSelecter).prev().offset().top;
+                                }catch(e){}
+                            }
+                        }
+                        // 화면 이동 0.8초(800)
+                        $("html,body").stop().animate({
+                            scrollTop: moveTop + 'px'
+                        }, {
+                            duration: 800, complete: function () {
+                            }
+                        });
+                    });
+                });
+            }
+        </script>
+        <nav>
+            <a href="active_senior.jsp"><img src="active_senior.png" alt="logo" class="logo"></a>
+            <input type="checkbox" id="check">
+            <div class="menu-icon">
+                <label for="check" class="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <ul class="topnav">
+                <li style="width: 100%; height: 80px;"></li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">액티브 시니어란?</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item active">구인 & 고용</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">정보알리미</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">커뮤니티</a>
+                </li>
+                <li>
+                    <a href="active_senior.jsp" class="nav-item">취미공유</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="nav-item">드랍다운</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li style="float: right;" class="login">
+                    <i class="far fa-user"></i>
+                    <a href="active_senior.jsp" class="nav-item">로그인</a>
+                    <a href="active_senior.jsp" class="nav-item">회원가입</a>
+                </li>
+
+            </ul>
+        </nav>
+    </head>
+    <body>
+            <div class="box" id="page1" style="background-image: url('main.jpg'); background-size:120em;">
+                <div class="person">
+                    <div class="container">
+                        <div class="container-inner">
+                            <img src="background1.jpg" alt="circle" class="circle">
+                            <img src="1.png" alt="이지원" class="img img1">
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="name">이지원</div>
+                    <div class="title">Backend developer</div>
+                </div>
+                <div class="param" style="width:100%;">
+                    <h2>액티브 시니어란?</h2>
+                    <p>
+                        액티브 시니어 백엔드 기술자 이지원입니다.<br><br>
+                        액티브 시니어는 정년 퇴직 이후 시간적, 경제적인 여유를 기반으로 사회활동에 적응적으로 참여하는 50~60대를 말합니다.
+                        새로운 제품이나 유행을 흡수하는데 적극적이며 가격보다 품질을 중요하게 생각하고, 생활의 안정을 추구하는 특성이 있다.
+                        우리 홈페이지는 이러한 액티브 시니어들의 정보 공유를 위한 홈페이지 입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="page2" style="background-image: url('page1.jpg'); background-size:100em;">
+                <div class="param" style="width:100%;">
+                    <h2>홈페이지를 만들게 된 목적</h2>
+                    <br><hr><br>
+                    <p>
+                        인간의 활동 가능 연령대와 생존기간은 높아지고 있는데, 사회가 아직 그것을 못받아 들이고 있다.
+                        정년 후에도 아직 일을하고 싶은 사람도 있을 것이고, 취미로 사람들과 모여 엔터테이먼트를 하고 싶은 사람도 잇을 것이다. 
+                        하지만 시니어 구직에 대한 정보도 인터넷에서 찾기도 힘들고, 정보 취합도 잘 되어있지 않다.
+                        그리고 따로 커뮤니티 같은 것도 없었다. 은퇴를 하고 나이를 먹으면 활동량이 자연스럽게 줄고, 움직임이 적어지고 우울증에 시달리는 사람이 많다.
+                        자신이 여전히 가용성 있는 사람이라는 것을 인식할 수 있게 하고, 활동적으로 할 수 있는 무언가 할일을 제공하는게 본 사이트의 취지이다.
+                        은퇴 후에도 이전에 일했던 기술력이 사라지는것이 아닌데도 본인의 기술을 활용하지 못한 채 일하는 시니어들도 많았다.
+                        이러한 액티브 시니어들이 활동할 수 있는 커뮤니티 + 정보를 제공하는 사이트를 만들고자 한다.
+                        스마트폰을 사용하지 못하던 시니어들을 갔다. 신규 시니어들은 50대때 부터 스마트폰을 사용해왔던 세대이기 때문에 시니어 대상 플랫폼을 만들어도 충분히 참여 가능할 수 있을거라 생각한다.
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="page3" style="background-image: url('last.jpg'); background-size:120em;">
+                <h1>홈페이지 기술</h1>
+                <div class="function">
+                    <div class="imgline" width="100%"">
+                        <span style="width:25%">
+                            <img src="css.png" width="250px" height="250px">
+                        </span>
+                        <span stlye="width:25%">
+                            <img src="jsp.png" width="250px" height="250px">
+                        </span>
+                        <span stlye="width:25%">
+                            <img src="tomcat.png" width="250px" height="250px">
+                        </span>
+                        <span stlye="width:25%">
+                            <img src="sql.png" width="250px" height="250px">
+                        </span>                    
+                    </div>
+                    <p><h2>#사용 기술</h2>
+                        jsp, servlet, apache tomcat, html, css, js, mysql, java<br>
+
+                        </p>
+                </div>
+            </div>
+    </body>
+</html>

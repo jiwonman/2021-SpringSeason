@@ -1,0 +1,9 @@
+#사용 기술
+java + jsp,servlet + apache,tomcat + html,css,js + mysql or mariadb
+#역할분담
+Backend 이지원, 장진호
+Frontend 이예은, 이태환
+
+홈페이지 구성 
+Mainpage에는 정보글, 추천글 , 인기글을 보여주며 우측 상단에 Login버튼을 구현해 놓았다.
+Navbar는 구인&고용 게시판, 취미 게시판, 정보 공유, 커뮤니티 게시판, About us로 나누어져 있다.
